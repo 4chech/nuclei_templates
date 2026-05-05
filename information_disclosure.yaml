@@ -1,0 +1,47 @@
+id: information_disclosure
+
+info:
+  name: Information Disclosure in web services
+  auhtor: XI
+  severity: medium
+  reference: https://XI.com
+  tags: templates, XI, information_disclosure, fuzzing
+
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/package.json"
+      - "{{BaseURL}}/.npmrc"
+      - "{{BaseURL}}/openapi.json"
+      - "{{BaseURL}}/api-docs"
+      - "{{BaseURL}}/graphql"
+      - "{{BaseURL}}/graphiql"
+      - "{{BaseURL}}/package-lock.json"
+      - "{{BaseURL}}/.git/HEAD"
+      - "{{BaseURL}}/.git/config"
+      - "{{BaseURL}}/robots.txt"
+      - "{{BaseURL}}/sitemap.xml"
+      - "{{BaseURL}}/.env"
+      - "{{BaseURL}}/.htaccess"
+      - "{{BaseURL}}/.htpasswd"
+      - "{{BaseURL}}/.hta"
+      - "{{BaseURL}}/cgi-bin/phpinfo.php"
+      - "{{BaseURL}}/backup"
+      - "{{BaseURL}}/backups"
+      - "{{BaseURL}}/config.php.bak"
+      - "{{BaseURL}}/swagger.json"
+      - "{{BaseURL}}/swagger-ui.html"
+      - "{{BaseURL}}/api/v1/docs"
+      - "{{BaseURL}}/api/v2/docs"
+      - "{{BaseURL}}/backup.bak"
+      - "{{BaseURL}}/database.bak"
+      - "{{BaseURL}}/.gitlab-ci.yml"
+      - "{{BaseURL}}/Jenkinsfile"
+
+
+    stop-at-first-match: false
+    matchers:
+      - type: status
+        status: 
+          - 200
