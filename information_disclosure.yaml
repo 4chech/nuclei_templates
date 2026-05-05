@@ -1,9 +1,9 @@
-id: information_disclosure
+id: potential_information_disclosure_detected
 
 info:
-  name: Information Disclosure in web services
+  name: Potential Information Disclosure in web services
   auhtor: XI
-  severity: medium
+  severity: info
   reference: https://XI.com
   tags: templates, XI, information_disclosure, fuzzing
 
@@ -40,4 +40,10 @@ http:
     matchers:
       - type: status
         status: 
-          - 200
+          - 301
+          - 302
+          - 303
+          - 304
+          - 305
+          - 307
+          - 308
