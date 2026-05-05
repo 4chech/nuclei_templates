@@ -3,7 +3,7 @@ id: information_disclosure_detected
 info:
   name: Information Disclosure in web services
   auhtor: XI
-  severity: info
+  severity: medium
   reference: https://XI.com
   tags: templates, XI, information_disclosure, fuzzing
 
