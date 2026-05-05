@@ -1,7 +1,7 @@
-id: information_disclosure_detected
+id: potential_information_disclosure_detected
 
 info:
-  name: Information Disclosure in web services
+  name: Potential Information Disclosure in web services
   auhtor: XI
   severity: info
   reference: https://XI.com
@@ -40,4 +40,10 @@ http:
     matchers:
       - type: status
         status: 
-        - 200
+          - 301
+          - 302
+          - 303
+          - 304
+          - 305
+          - 307
+          - 308
