@@ -27,17 +27,13 @@ http:
       - "{{BaseURL}}/.htpasswd"
       - "{{BaseURL}}/.hta"
       - "{{BaseURL}}/cgi-bin/phpinfo.php"
-      - "{{BaseURL}}/backup"
-      - "{{BaseURL}}/backups"
       - "{{BaseURL}}/config.php.bak"
       - "{{BaseURL}}/swagger.json"
       - "{{BaseURL}}/swagger-ui.html"
-      - "{{BaseURL}}/api/v1/docs"
-      - "{{BaseURL}}/api/v2/docs"
-      - "{{BaseURL}}/backup.bak"
-      - "{{BaseURL}}/database.bak"
       - "{{BaseURL}}/.gitlab-ci.yml"
       - "{{BaseURL}}/Jenkinsfile"
+      - "{{BaseURL}}/backup.bak"
+      - "{{BaseURL}}/database.bak"
 
 
     stop-at-first-match: false
